@@ -28,6 +28,7 @@ jobs:
           # also mc cmd returns 1 even though successful?
           ~/.magento-cloud/bin/magento-cloud ssh-cert:load --no || :
           echo "IdentityFile %d/.magento-cloud/.session/sess-cli-default/ssh/id_ed25519" >> ~/.ssh/config
+          env
           exit 1
       # - name: bats tests
       #   run: |
